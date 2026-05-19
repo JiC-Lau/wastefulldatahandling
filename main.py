@@ -43,7 +43,7 @@ def add_student():
 
     students = load_students()
 
-    duplicate_found = False
+    
     for student in students:
         if student["student_number"] == student_number:
             duplicate_found = True
