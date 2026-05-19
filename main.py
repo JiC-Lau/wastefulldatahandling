@@ -173,13 +173,8 @@ def display_course_summary():
 
 def save_backup():
     students = load_students()
-
-    json_text = json.dumps(students)
-    copied_students = json.loads(json_text)
-
     with open("students_backup.json", "w") as file:
-        json.dump(copied_students, file, indent=4)
-
+        json.dump(students, file, indent=4)
     print("Backup saved.")
 
 
