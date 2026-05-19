@@ -79,7 +79,9 @@ def add_grade():
                 "course": course,
                 "grade": grade
             })
-            student_found = True
+            save_students(students)
+            print("Grade added.")
+            return         
 
     if student_found:
         save_students(students)
