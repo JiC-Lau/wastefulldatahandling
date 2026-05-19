@@ -73,7 +73,7 @@ def add_grade():
 
     
 
-    for a student in students:
+    
         if student["student_number"] == student_number:
             student["grades"].append({
                 "course": course,
