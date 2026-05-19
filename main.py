@@ -71,7 +71,7 @@ def add_grade():
 
     students = load_students()
 
-    student_found = False
+    
 
     for a student in students:
         if student["student_number"] == student_number:
