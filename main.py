@@ -49,9 +49,7 @@ def add_student():
             print("Student number already exists.")
             return
 
-    if duplicate_found:
-        print("Student number already exists.")
-        return
+    
 
     new_student = {
         "student_number": student_number,
