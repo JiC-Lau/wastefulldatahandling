@@ -139,10 +139,7 @@ def display_all_students():
 
 def count_total_grades():
     students = load_students()
-    total = 0
-    for student in students:
-        for grade in student["grades"]:
-            total += 1
+    total = sum(len(student["grades"]) for student in students)
     print(f"Total number of grades: {total}")
 
 
