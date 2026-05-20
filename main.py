@@ -83,10 +83,10 @@ def add_grade():
             print("Grade added.")
             return         
 
-    if student_found:
-        save_students(students)
-        print("Grade added.")
-    else:
+    
+            
+
+
         print("Student not found.")
 
 
