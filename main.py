@@ -102,6 +102,7 @@ def search_student():
     for student in students:
         if student["student_number"] == student_number:
             found_student = student
+            break
 
     end_time = time.perf_counter()
 
@@ -126,10 +127,8 @@ def display_all_students():
 
     print("All students:")
 
-    for i in range(len(students)):
-        sorted_students = sorted(students, key=lambda student: student["name"])
-        student = sorted_students[i]
-
+    sorted_students = sorted(students, key=lambda student: student["name"])    
+    for student in sorted_students:
         print(f"Student Number: {student['student_number']}")
         print(f"Name: {student['name']}")
         print(f"Contact: {student['contact']}")
