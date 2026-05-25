@@ -73,7 +73,7 @@ def add_grade():
 
     
 
-    
+    for student in students:
         if student["student_number"] == student_number:
             student["grades"].append({
                 "course": course,
@@ -83,10 +83,10 @@ def add_grade():
             print("Grade added.")
             return         
 
-    if student_found:
-        save_students(students)
-        print("Grade added.")
-    else:
+    
+            
+
+
         print("Student not found.")
 
 
