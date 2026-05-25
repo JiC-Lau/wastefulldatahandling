@@ -214,3 +214,23 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+def display_course_summary():
+    students = load_students()
+    all_courses = set()
+
+    for student in students:
+        for grade in student["grades"]:
+            all_courses.add(grade["course"])
+
+    print("Course summary:")
+
+
+    course_counts = {}
+    for student in students:
+        for grade in student["grades"]:
+            course = grade["course"]
+            course_counts[course] = course_counts.get(course, 0) + 1
+
+    for course, count in course_counts.items():
+        print(f"{course}: {count} grade(s)")
