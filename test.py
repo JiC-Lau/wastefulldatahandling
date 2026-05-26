@@ -77,4 +77,24 @@ def search_student_manual(student_number):
 if __name__ == "__main__":
     test_add_and_search()
     test_search_performance()
-       
+
+
+
+def display_course_summary():
+    students = load_students()
+
+    all_courses = []
+    for student in students:
+        for grade in student["grades"]:
+            if grade["course"] not in all_courses:
+                all_courses.append(grade["course"])
+    print("Course summary:")
+
+    
+    for course in all_courses:
+        count = 0
+        for student in students:
+            for grade in student["grades"]:
+                if grade["course"] == course:
+                    count += 1
+        print(f"{course}: {count} grade(s)")
